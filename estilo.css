@@ -1,0 +1,352 @@
+@font-face {
+    font-family: "Fuego"; /* FROM https://www.dafont.com/es/hellbone.font */
+    src: url(resources/Hellbone-Demo.otf) format("truetype");
+}
+@font-face {
+    font-family: "Pixel_windows"; /* FROM https://www.dafont.com/es/leviwindows.font */
+    src: url(resources/WinPix.ttf) format("truetype");
+}
+@font-face {
+    font-family: "goth"; /* FROM https://www.dafont.com/es/elementary-gothic-bookhand.font */
+    src: url(resources/Goth.ttf) format("truetype");
+}
+
+html{
+  scrollbar-width: none;
+}
+
+#controlador_musica{
+  position: fixed;
+  height: 150px;
+  aspect-ratio: 1/1;
+  top:2%;
+  right: 2%;
+  z-index: 1000000;
+  cursor:pointer;
+  /* transform-origin: 50% 50%; */
+  -webkit-animation-name: pulso;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:ease-in-out;
+}
+
+#controlador_presentacion{
+  position: fixed;
+  height: 150px;
+  aspect-ratio: 1/1;
+  top:2%;
+  left: 2%;
+  z-index: 1000000;
+  cursor:pointer;
+
+  -webkit-animation-name: pulso;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:ease-in-out;  
+}
+
+@-webkit-keyframes pulso {
+  0% { scale: 120% 100%}
+  50% { scale: 100% 120%}
+  100% { scale: 120% 100%}
+}
+
+p.customfont { 
+    font-family: "My Custom Font", Verdana, Tahoma;
+}
+
+body{
+	background-image: url("resources/fondo.png");
+  scrollbar-width: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+  
+}
+
+*{
+    cursor:url("resources/cursor.png"), auto;
+}
+#principal{
+	width:75%;
+  scrollbar-width: none;
+	margin:0% 5% 5% 20%;
+    z-index:2;
+    /* color: #00face; */
+    color: black;
+}
+
+.bienvenide{
+  -webkit-animation-name: cambioColor;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:linear;
+  color:black;
+  font-size: 700%;
+  display: inline-block;
+  text-decoration: wavy;
+  font-weight: bolder;
+}
+@-webkit-keyframes cambioColor {
+  0% {
+    color:red;
+  }
+  15% {
+    color:magenta;
+  }
+  30% {
+    color:blue;
+  }
+  45% {
+    color:turquoise;
+  }
+  60% {
+    color:lime;
+  }
+  75% {
+    color:yellow;
+  }
+  90%{
+    color: orange;
+  }
+  100%{
+    color:red;
+  }
+}
+
+a{
+    -webkit-animation-name: cambioColor;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black;
+    cursor: pointer;
+}
+
+#lateral a {
+  cursor:url("resources/cursor.png"), auto;
+}
+
+#lateral a img{
+  cursor: pointer;
+}
+
+
+#titulo{
+  position:relative;
+  top:0px;
+	margin-top:0px;
+	align-self:center;
+	width:100%;
+  border-collapse: collapse;
+}
+
+.tdIzquierda{
+	width:50%;
+	height: 15%;
+	text-align:center;
+}
+
+.tdDerecha{
+	width:50%;
+	text-align:right;
+}
+
+#cuerpo{
+	width:100%;
+	border: solid rgb(241,185,0) 5px;
+  border-style: outset;
+}
+
+.fondo_alt{
+  background-color: rgba(241,185,0, .5)
+}
+.fondo_alt2{
+  background-color: rgba(0, 0, 0, 0.936);
+}
+
+.imagenDerecha{
+  float: right;
+  width: 25%;
+  border: solid #00face 5px;
+  border-style: outset;
+  margin:5px;
+}
+
+.muestraSellos{
+  margin: auto;
+  width: 99px;
+  height: 56px;
+}
+#divA{
+  margin:auto;
+  text-align: center;
+  padding: 20px;
+}
+
+@keyframes texto-alerta {
+ 0% { transform: translateX(0)}
+ 1% { transform: translateY(0px); opacity: 1;}
+ 10% { transform: translateX(3px)}
+ 20% { transform: translateX(-3px)}
+ 30% { transform: translateX(3px)}
+ 40% { transform: translateX(-3px)}
+ 50% { transform: translateX(3px)}
+ 60% { transform: translateX(-3px)}
+ 70% { transform: translateX(3px)}
+ 80% { transform: translateX(-3px)}
+ 90% { transform: translateX(3px)}
+ 99% { transform: translateY(50px); opacity: 0;}
+ 100% { transform: translateX(0);}
+}
+
+.textoFuego{
+  -webkit-animation-name: texto-alerta;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function:linear;
+  
+  font-family:Fuego;
+  font-weight: bolder;
+  color:red;
+  text-shadow: 3px 3px yellow;
+  letter-spacing: 5px;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.sello{
+	height:50%;
+	width:15%;
+}
+
+.separadorEstrellas{
+	width:100%;
+	margin:auto;
+	padding:auto;
+}
+
+#cabecera{
+  height: 210px;
+  width: 100%;
+  margin-bottom: 60px;
+  position: relative;
+}
+.gifsTexto{
+  height: 40px;
+  aspect-ratio: 1/1;
+  padding: 0px 5px 0px 5px;
+}
+
+.gifsTexto:last-child {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.pixelart{
+  image-rendering: pixelated; 
+}
+
+[class*='parrot'] {
+  position: absolute;
+  height: 60px; 
+  width: 60px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  z-index:10;
+  opacity: 100%;
+  pointer-events: none;
+}
+
+.parrot-1 {
+  background-image: url('resources/orbita/1.png');
+}
+
+.parrot-2 {
+  background-image: url('resources/orbita/2.png');
+}
+
+.parrot-3 {
+  background-image: url('resources/orbita/3.png');
+}
+
+.parrot-4 {
+  background-image: url('resources/orbita/4.png');
+}
+
+.parrot-5 {
+  background-image: url('resources/orbita/5.png');
+}
+
+.parrot-6 {
+  background-image: url('resources/orbita/6.png');
+}
+
+.parrot-7 {
+  background-image: url('resources/orbita/7.png');
+}
+
+.parrot-8 {
+  background-image: url('resources/orbita/8.png');
+}
+
+.parrot-9 {
+  background-image: url('resources/orbita/9.png');
+}
+
+.parrot-10 {
+  background-image: url('resources/orbita/10.png');
+}
+
+.parrot-11 {
+  background-image: url('resources/orbita/11.png');
+}
+
+.parrot-12 {
+  background-image: url('resources/orbita/12.png');
+}
+
+.parrot-13 {
+  background-image: url('resources/orbita/13.png');
+}
+
+.parrot-14 {
+  background-image: url('resources/orbita/14.png');
+}
+
+.parrot-15 {
+  background-image: url('resources/orbita/15.png');
+}
+
+.parrot-16 {
+  background-image: url('resources/orbita/16.png');
+}
+
+.parrot-17 {
+  background-image: url('resources/orbita/17.png');
+}
+
+.parrot-18 {
+  background-image: url('resources/orbita/18.png');
+}
+
+.parrot-19 {
+  background-image: url('resources/orbita/19.png');
+}
+
+.parrot-20 {
+  background-image: url('resources/orbita/20.png');
+}
+
+#paleta{
+  color:#b06d00;
+  color:#f1b900;
+  color:#e3fdfa;
+  color:#00face;
+  color:#34977f;
+}

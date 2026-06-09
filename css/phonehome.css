@@ -1,0 +1,420 @@
+*{
+    color: whitesmoke;
+    font-family: monospace;
+}
+body{
+    background-color: black;
+}
+#cuerpo{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    /* padding-top:25%; */
+    /* padding-bottom: 20%; */
+    text-align: center;
+    z-index: 0;
+}
+
+.marcador{
+    height:40px;
+}
+
+#navegacion, #reproductor{
+    position: fixed;
+    left:0px;
+    margin: 0px;
+    height: 10%;
+    border: double white 5px;
+    padding: 2px;
+    display: block;
+    box-sizing:border-box;
+    width: 100%;
+    background-color: black;
+    z-index:10;
+}
+
+#navegacion{
+    top:0px;
+    height: 56px;
+}
+
+#navegacion table{
+    border: solid white 2px;
+}
+
+#linea td{
+    border: solid white 2px;
+    width: 1%;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+}
+
+#reproductor{
+    bottom: 0px;
+}
+
+#foto_de_perfil{
+    width: 50%;
+    aspect-ratio: 1/1;
+    border: solid white 2px;
+}
+
+h1{
+    font-size: 21px;
+    padding: 0px 10px 0px 10px;
+}
+h2{
+    font-size: 19px;
+    padding: 0px 10px 0px 10px;
+}
+
+.titulo{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px;
+}
+
+.texto{
+    font-size: 16px;
+    padding: 0px 30px 0px 30px;
+    text-align: justify;
+}
+
+.parada{
+
+    text-align: center;
+    border: solid white 2px;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+    height: 29px;
+    aspect-ratio: 1/1;
+}
+
+a{
+    color: #00face;
+    text-decoration: underline;
+}
+
+.sello{
+    width: 20%;
+}
+
+pregunta{
+  display: block;
+  font-weight: bolder;
+    font-size: 16px;
+    padding: 20px 20px 10px 20px;
+  width: 80%;
+  border-top:  2px magenta dotted;
+  margin:auto;
+}
+
+respuesta{
+  display: block;
+  text-align: justify;
+  font-size: 16px;
+  padding: 10px 20px 20px 20px;
+  width: 78%;
+  margin:auto;
+  /* padding: 0px 0px 10px 2%; */
+}
+
+.bgm{
+    visibility: hidden;
+    user-select: none;
+}
+
+#reproductor img{
+    display: inline-block;
+    margin: 0px 3px 0px 3px;
+    width: 0px;
+    width: 25px;
+    aspect-ratio: 1/1;
+}
+
+#duracion{
+  height: 3px;
+  border: none;
+  background-color: white;
+  border-radius: 20px;
+  accent-color: whitesmoke;
+  min-width: 60%;
+  max-width: 60%;
+  margin: 0px;
+  display: inline-block;
+  padding: 3px;
+}
+
+#playing{
+    margin:0px;
+    padding: 3px;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+}
+
+#tiempo{
+    display: inline-block;
+    width: 35px;
+}
+
+.tabla_juegos{
+  /* border-collapse: collapse; */
+  margin: 0px auto 10px auto;
+  max-width: 30%;
+  height: fit-content;
+}
+
+.tabla_juegos td{
+    border: solid white 2px;
+    width: 1%;
+    text-align: center;
+    margin: auto;
+}
+
+.tabla_juegos td img{
+  width: 50px;
+  padding: 10px 20px 10px 20px;
+}
+
+.tabla_juegos td p{
+  text-align: center;
+  margin: 5px;
+}
+
+.tabla_links tr td{
+  padding: 10px;
+  vertical-align: top;
+}
+
+.boton_link{
+    margin: 50px auto 50px auto;
+    height: fit-content;
+    width: fit-content;
+    padding: 15px;
+    border: double white 5px;
+    background-color: black;
+}
+
+.boton_link a{
+    padding: 15px;
+    font-size: 150%;
+}
+
+.ojo{
+    position: absolute;
+    z-index: -1;
+}
+.ojo:nth-child(even) {
+    transform: scaleX(-1);
+}
+#sierra{
+    height: 30vw;
+    image-rendering: pixelated;
+    margin-bottom: 10vw;
+}
+
+#planetario{
+    position:absolute;
+    height:300px;
+    width:95vw;
+    /* border:solid white 3px; */
+    margin-top: 150px;
+}
+
+#sol{
+    height: 50%;
+    /* top:50%; */
+    left:50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    display: block;
+    z-index: 1;
+    filter: brightness(10000%);
+    /* image-rendering: pixelated; */
+}
+.astro{
+    position: absolute;
+    border-radius: 100%;
+}
+
+.planeta{
+    height: 15%;
+    top:-5%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transform-origin: 50% 50%;
+    background-color: white;
+    outline: solid white 2px;
+    outline-offset: -2px;
+    aspect-ratio: 1/1;
+
+    -webkit-animation-name: orbit, growth;
+	-webkit-animation-duration: 7s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function:linear;
+    -webkit-animation-delay: 0s;
+
+    animation-name: orbit, growth;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-timing-function:linear;
+    animation-delay: 0s;
+}
+
+.planeta:nth-child(2){
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.planeta:nth-child(3){
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.planeta:nth-child(4){
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.planeta:nth-child(5){
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+.planeta:nth-child(6){
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+.planeta:nth-child(7){
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.planeta:nth-child(8){
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+
+@-webkit-keyframes orbit {
+   0% {
+      left:50%;
+      animation-timing-function: ease-out;
+      z-index: 5;
+   }
+   20% {
+      left:80%;
+      top:-30%;
+      animation-timing-function: ease-in;
+      z-index: 4;
+   }
+   25%{
+    z-index: 3;
+   }
+   40% {
+      left:75%;
+      animation-timing-function: linear;
+      z-index: 3;
+   }
+   60% {
+      left:20%;
+      animation-timing-function: ease-in-out;
+      z-index: 2;
+   }
+   80% {
+      left:10%;
+      top:30%;
+      animation-timing-function: ease-in;
+   }
+   100% {
+      left:50%;
+      animation-timing-function: linear;
+      z-index: 5;
+   }
+}
+
+@-webkit-keyframes growth {
+   0% {
+      transform:scale(1.8,1.8);
+      animation-timing-function: ease-in;
+   }
+   20% {
+      transform:scale(1,1);
+      animation-timing-function: linear;
+   }
+   40% {
+      transform:scale(0,0);
+      /* animation-timing-function: linear; */
+   }
+   60% {
+      transform:scale(0,0);
+      /* animation-timing-function: ease-in-out; */
+   }
+   80% {
+      transform:scale(1,1);
+      /* animation-timing-function: ease-in; */
+   }
+   100% {
+      transform:scale(1.8,1.8);
+      animation-timing-function: ease-out;
+   }
+}
+
+@keyframes orbit {
+   0% {
+      left:50%;
+      animation-timing-function: ease-out;
+      z-index: 5;
+   }
+   20% {
+      left:80%;
+      top:-30%;
+      animation-timing-function: ease-in;
+      z-index: 4;
+   }
+   25%{
+    z-index: 3;
+   }
+   40% {
+      left:75%;
+      animation-timing-function: linear;
+      z-index: 3;
+   }
+   60% {
+      left:20%;
+      animation-timing-function: ease-in-out;
+      z-index: 2;
+   }
+   80% {
+      left:10%;
+      top:30%;
+      animation-timing-function: ease-in;
+   }
+   100% {
+      left:50%;
+      animation-timing-function: linear;
+      z-index: 5;
+   }
+}
+
+@keyframes growth {
+   0% {
+      transform:scale(1.8,1.8);
+      animation-timing-function: ease-in;
+   }
+   20% {
+      transform:scale(1,1);
+      animation-timing-function: linear;
+   }
+   40% {
+      transform:scale(0,0);
+      /* animation-timing-function: linear; */
+   }
+   60% {
+      transform:scale(0,0);
+      /* animation-timing-function: ease-in-out; */
+   }
+   80% {
+      transform:scale(1,1);
+      /* animation-timing-function: ease-in; */
+   }
+   100% {
+      transform:scale(1.8,1.8);
+      animation-timing-function: ease-out;
+   }
+}

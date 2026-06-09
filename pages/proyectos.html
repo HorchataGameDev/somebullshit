@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Metrópolis</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="../css/proyectos.css">
+    <link rel="icon" href="../resources/perfil.png" type="image/x-icon">
+</head>
+<body>
+    <div id="fondo">
+        <img src="../resources/eepy.gif" id="controlador_musica" style="position:absolute" onclick="alertar('Nope');">
+        <audio loop id="musica_de_fondo">
+            <source src="../resources/musica/capital.mp3" type="audio/mpeg">
+        </audio>
+        <img id="controles" src="../resources/mapa/controles.png" class="pixelart">
+        <img id="main_char" class=chars src="../resources/mapa/facing_right.png" data-last_dir="left">
+        <img class="chars" src="../resources/mapa/chars/bus.gif" style="height:119px;width:194px;transform: scaleX(-1);top: 470px;left:20px;">
+        <img class="chars" src="../resources/mapa/chars/maid.png" style="height:94px;width:64px;top:120px;left:950px;">
+        <img class="chars" src="../resources/mapa/chars/idol.gif" style="height:150px;width:150px;top:350px;left:900px;z-index:7;">
+        <img class="chars" src="../resources/botonWeb.gif" style="height:62px;width:176px;top:185px;left:380px;rotate: -15deg;">
+        <img class="chars" src="../resources/mapa/chars/bike.gif" style="height:84px;width:84px;transform: scaleX(-1);top: 230px;left:180px;">
+        <img class="chars" src="../resources/mapa/chars/music.gif" style="height:100px;width:45px;top:115px;left:750px;">
+        <img class="chars" src="../resources/mapa/chars/pdk.png" style="height:70px;width:70px;top:250px;left:1150px;">
+
+        <img class="chars" src="../resources/mapa/chars/can.gif" style="height:130px;width:72px;top: 400px;left:350px;">
+        <img class="chars" src="../resources/mapa/chars/hermit.gif" style="height:127px;width:85px;top: 390px;left:540px;">
+
+        <img class="farola pixelart modal_escondido" src="../resources/mapa/chars/head.png" style="height:141;width:60;top:200px;left:675px;z-index:6;">
+        <img class="farola pixelart modal_escondido" src="../resources/mapa/chars/pole.png" style="height:141;width:60;top:200px;left:675px;z-index:3;">
+        <img class="farola pixelart modal_escondido" src="../resources/mapa/chars/spotlight.png" style="height:141;width:60;top:200px;left:675px;z-index:4;">
+        <img class="farola pixelart modal_escondido" src="../resources/mapa/chars/light.png" style="height:141;width:60;top:200px;left:675px;z-index:6;">
+    </div>
+
+    <div id="contenedor_modales">
+        <div class="modal_info modal_escondido" id=0 >
+            <h1>M.A.I.D.</h1>
+            <p>Este es Mi Asistente de Interfaz de Discord o MAID para abreviar. Se trata de un bot de discord que hice hace unos años para que avisara de los cumpleaños en el servidor de mis amigos.<br>Funcionaba bastante bien pero no quería pagar un sitio para hostearlo así que no llegamos a usarlo mucho.</p>
+            <p>Me gustaría darle otro intento a hacer un bot de discord. Recuerdo que tenía ideas muy chulas para añadirle funciones, pero ya no uso tanto discord, así que no creo que llegue a hacerlo nunca.</p>
+            <p>Tengo el código de este proyecto subido a github. Si quieres echarle un vistazo al código está todo ahí.</p>
+            <center><a target="_blank" href=https://github.com/HorchataGameDev/MAID>Código en GitHub</a><br><br><img src="../resources/mapa/chars/maid.png" class="pixelart" height="60px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=1 >
+            <h1>La saga del plano</h1>
+            <p>La saga del plano es una saga de juegos cortos interconectados que quiero hacer a lo largo de varios años.<br>Este es mi mayor proyecto personal. Lo que más me apetece hacer. Me motiva más que ninguna otra cosa que tenga entre manos.</p>
+            <p>Hace muchos años pensé la base y la historia para el primer videojuego, pero como no tenía mucha experiencia lo dejé para más adelante mientras conseguía práctica conn otros juegos más sencillos. Al empezar a hacer ese juego más sencillo, decidí que le aportaría mucho valor añadir secretos que hacen referencia a la historia del próximo título. Así empecé a ampliar la escala de todo el proyecto sin darme cuenta.</p>
+            <p>Es entonces cuando me vuelvo demasiado perfeccionista. Quiero que todo tenga sentido y no tener que retconear nada, así que aparqué el juego sencillo y me puse a escribirlo todo. Sé que es casi imposible atar todos los cabos, pero quiero evitar que pase tanto como pueda.</p>
+            <p>A día de hoy todavía no he sacado ningún juego de la saga del plano. He dedicado todo mi tiempo a dejar por escrito una biblia del proyecto y no me arrepiento. Creo que haciendo esto he evitado varios errores que no habrían matado mi espíritu creativo, pero me habrían escocido durante toda mi vida.</p>
+            <p>Entre bocetos, descripciones, guiones, lore e ideas sueltas, este proyecto cuenta con alrededor de 300 páginas de documentación de las que espero sacar alrededor de 5 títulos.</p>
+            <p>La saga del plano existirá  y será terminada aunque me vaya la vida en ello. De verdad que tengo muchísimas ganas de que puedas jugarla algún día.</p>
+            <center><br><img src="../resources/mapa/chars/idol.gif" class="pixelart" height="60px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=2 >
+            <h1>Horchata Wide Web</h1>
+            <p>Perdoooon no quiero poner relleno pero de verdad que me hace mucha ilu tener mi propia web. Aunque no tenga backend y no pueda hacer la mitad de las cosas que me gustaría hacer. Seguramente de aquí a un tiempo monte una página en condiciones a partir de esta, pero de momento damos gracias a github pages my beloved.<br>La verdad es que es divertido tener la limitación de estar trabajando en local, sobre todo si quiero meter secretos en la página, pero me las apaño. Por ejemplo, mira qué clase de cifrado más chula he hecho!<p>
+            <iframe width="100%" height="auto" src="../scripts/cipher.js" style="background-color:white"></iframe>
+
+            </p>También me está sirviendo mucho como distracción. Me lo paso super bien intentando implementar tonterías como el mapa o la pecera y me viene genial para no pensar en mis problemas.</p>
+            <p>Me encantaaría convencer a algunos amigos de que se hicieran páginas del estilo y tener cada uno una especie de red de blogs personalizados, pero claro, para mi es fácil decirlo porque soy desarrollador web.<br>Espero que te esté gustando mi página. <3 </p>
+            <center><br><img src="../resources/botonWeb.gif" class="pixelart" height="60px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=3 >
+            <h1>VOLA</h1>
+            <p>oh boy</p>
+            <p>VOLA es un juego que empecé a desarrollar en 2021 con la intención de practicar pixel art, diálogos y funciones básicas de Unity.<br>Es un juego muy sencillo: pedaleas y lees texto hasta que se acaba. No pretende ser super divertido o profundo, así que no lo es. Un proyecto muy fácil, ¿no?</p>
+            <p>VOLA aún no está terminado. He estado trabajando intermitentemente en él durante los últimos 5 años y está en un perpetuo estado de casi estar listo. Development hell lo llaman. Esto es un asunto completamente personal, y es que nunca estoy del todo satisfecho con el resultado. Estoy seguro de que podría haberlo sacado cuando planeaba hacerlo y que mis amigos me habrían felicitado, les hubiera gustado y habría pasado al siguiente proyecto, pero sería yo quien no estaría contento.</p><p>Le tengo mucho cariño a este juego y no quiero dejarlo de lado. Tengo planes para este juego de los que dependen mis proyectos futuros. Tal vez simplemente no es el momento de sacarlo.</p>
+            <p>Parece una tontería pero siento la necesidad de pedir perdón por tardar tanto, a nadie en particular. También quiero prometer que VOLA existirá, pero tampoco sé a quién se lo estoy prometiendo. Solo sé que no me voy a rendir.</p>
+            <center><br><img src="../resources/vola.png" class="pixelart" height="100px"></center>
+        </div>
+            <div class="modal_info modal_escondido" id=4>
+            <h1>COMING SOON!!!</h1>
+            <center><br><img src="../resources/ynbaile.gif" class="pixelart" height="100px"></center>
+        </div>
+        <div>
+            <div class="modal_info modal_escondido" id=5>
+            <h1>COMING SOON!!!</h1>
+            <center><br><img src="../resources/ynbaile.gif" class="pixelart" height="100px"></center>
+        </div>
+                <div>
+            <div class="modal_info modal_escondido" id=6>
+            <h1>untitled music quiz game</h1>
+            <p>¡Mi proyecto final de desarrollo de aplicaciones web! Estoy bastante orgulloso del resultado para el poco tiempo que tuve. Es un party game completamente funcional que usa la api de Spotify.</p>
+            <p>El funcionamiento es el siguiente: te metes en la página y haces login con tu cuenta de spotify, creas una sala o te unes a una sala mediante clave, la aplicación registra las últimas canciones gustadas de cada jugador y selecciona unas pocas. Ahora el programa va reproduciendo las canciones y cada jugador deberá, en un tiempo limitado, adivinar a cuál de sus amigos le gusta la canción que está sonando.</p>
+            <p>Sí, escomo el anime music quiz. Recuerdo que no me preocupé por el diseño visual y era fea como pegarle a un padre, pero no costaría mucho trabajo ponerla a punto y dejarla subida en algún sitio. En fin, otro proyecto a medias.</p>
+            <center><br><img src="../resources/mapa/chars/music.gif" class="pixelart" height="100px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=7 >
+            <h1>Resolvedor de Pokedoku</h1>
+            <p>He estado resolviendo el pokedoku prácticamente todos los días desde que salió junto con un amigo y siempre nos lo hemos tomado de forma competitiva para completar la pokedex. Ambos estamos siempre buscando formas de optimizar los resultados y llenar las categorías amplias antes de las escasas y eso me ha llevado a pensar cuál sería la forma más eficiente de completar la pokedex.</p>
+            <p>Hace poco, estudiando ciencia de datos y webscrapping, se me ocurrió que podría hacer una aplicación que leyera mi pokédex y generara las elecciones más óptimas (teniendo en cuenta shinies y repes) y me gustaría ponerme con ello después de aprender un poco más sobre ciencia de datos.</p>
+            <p>¿Es trampa hacer esto? Es discutible.</p>
+            <center><br><img src="../resources/orbita/1.png" class="pixelart" height="100px"></center>
+        </div>
+        <div id=modal_c class="modal_escondido">
+            <p>Ha aparecido una farola aquí en medio. Tiene una inscripción grabada al pie:</p>
+            <verso>
+                En memoria al creador sin nombre<br>
+                Nato y difunto en la época anterior al tiempo.<br>
+                Sea venerado cada 19 de Mayo, día en que hayaron sus restos.<br>
+                QEPD<br>
+            </verso>
+        </div>
+        <div id=modal_s class="modal_escondido">
+            <p>Hay un teléfono en el suelo.<br>La pantalla no responde al tacto, pero todavía puede leerse el fragmento de una conversación.</p>
+            <img src="../resources//bordes/telefono.png" class="tel">
+            <div class="tel_content">
+                <p> That's enough, let's get you home.</p>
+            </div>
+        </div>
+    </div>
+
+        
+
+    <audio loop id=ambient>
+        <source src="../resources/musica/White waves.mp3" type="audio/mpeg">
+    </audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="../scripts/proyectos.js" defer></script>
+    <script src="../script.js" defer></script>
+    <div id="no_trail"></div>
+</body>
+</html>

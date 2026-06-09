@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>glub glub</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="stylesheet" href="../css/aboutme.css">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <link rel="icon" href="../resources/perfil.png" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <img src="../resources/eepy.gif" id="controlador_musica" onclick="alternarMusica()">
+    <audio loop id="musica_de_fondo">
+        <source src="../resources/musica/pecera.mp3" type="audio/mpeg">
+    </audio>
+    <div id="bordePecera"></div>
+    <div id="pecera">
+        <!-- from https://www.biodiversitylibrary.org/page/5897384 -->
+        <div class="contenedor_pez" id="contenedor_1">
+            <img class=pez id=pez1 src="../resources/peces/pez1.png" onclick="modalShow(1);"><p>Películas</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_2">
+            <img class=pez id=pez2 src="../resources/peces/pez2.png" onclick="modalShow(2);"><p>Juegos</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_3">
+            <img class=pez id=pez4 src="../resources/peces/pez4.png" onclick="modalShow(3);"><p>pokemon</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_4">
+            <img class=pez id=pez3 src="../resources/peces/pez3.png" onclick="modalShow(4);"><p>kinlist</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_5">
+            <img class=pez id=pez5 src="../resources/peces/pez5.png" onclick="modalShow(5);"><p>fotos</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_6">
+            <img class=pez id=pez6 src="../resources/peces/pez6.png" onclick="modalShow(6);"><p>anime</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_7">
+            <img class=pez id=pez7 src="../resources/peces/pez7.png" onclick="modalShow(7);"><p>Música</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_8">
+            <img class=pez id=pez8 src="../resources/peces/pez8.png" onclick="modalShow(8);"><p>Página web</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_9">
+            <img class=pez id=pez9 src="../resources/peces/pez9.png" onclick="modalShow(9);"><p>otros</p>
+        </div>
+        <div class="contenedor_pez" id="contenedor_10">
+            <img class=pez id=pez10 src="../resources/peces/pez10.png"  onclick="modalShow(10);"><p>Pride</p>
+        </div>
+        <div id="contenedor_gay">
+            <img id="pez_gay" src="../resources/peces/pez_gay.png" onclick="modalShow(99);"><p>Nudes</p>
+        </div>
+    </div>
+    <div id="Old_Hobson">
+        <a href="../index.html#sobreMi">Volver</a>
+    </div>
+    <div id="contenedor_kelp"></div>
+    <div class="window" id="modal">
+        <div class="title-bar" id="barra_modal">
+        <div class="title-bar-text" id="titulo_modal">A Window With Stuff In It</div>
+        <div class="title-bar-controls">
+            <button aria-label="Close" onclick="modalHide();"></button>
+        </div>
+    </div>
+  <div class="window-body" id="cuerpo_modal">
+    <h1>Un titulo</h1>
+    <p>Un texto</p>
+
+</div>
+    <div class="status-bar">
+        <p class="status-bar-field">Press F1 for help</p>
+        <p class="status-bar-field">Slide 1</p>
+        <p class="status-bar-field">CPU Usage: 14%</p>
+    </div>
+</div>
+
+<div id="no_trail"></div>
+</div>
+</body>
+    <script defer src="../scripts/aboutme.js"></script>
+    <script defer src="../script.js" defer></script>
+</html>
+
+    <!-- <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"></iframe> -->
+
+    <!-- <iframe id="inlineFrameExample" title="Inline Frame Example" width="98%" height="400px" src="https://backloggd.com/u/HorchataGameDev/list/favos/"></iframe> -->

@@ -1,0 +1,101 @@
+body{
+    height: auto;
+    background-image: unset;
+    background: none;
+    background-image: linear-gradient(rgba(65, 141, 255, 0.3) .2em, transparent .1em), linear-gradient(90deg, rgba(65, 141, 255, 0.3) .2em, transparent .1em);
+    /* background-image: linear-gradient(rgb(255, 0, 0) .1em, transparent .1em), linear-gradient(90deg, rgb(255, 0, 0) .1em, transparent .1em); */
+
+    background-size: 3em 3em;
+    border:none;
+}
+body *{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#margen{
+    position:absolute;
+    height: auto;
+    width: 9vw;
+    background-image: url("../resources/fondos/punchhole.png");
+    background-repeat: repeat-y;
+    background-size: contain;
+    top:0px;
+}
+#titulo{
+    width: 100%;
+    text-align: center;
+    font-size: 56px;
+    margin: 5vw 0px 0px 0px;
+}
+
+.mayor{
+    margin-left: 12vw;
+    width: 76vw;
+}
+.menor{
+    margin-left: 16vw;
+    width: 72vw;
+}
+.mayor .nombre{
+    width: 70%;
+    float:left;
+    margin:0px;
+    font-size: 40px;
+}
+.mayor .fecha{
+    width: 30%;
+    float:right;
+    text-align: right;
+    margin:0px;
+    font-size: 40px;
+}
+
+.menor .nombre{
+    width: 70%;
+    float:left;
+    margin:0px;
+    font-size: 24px;
+}
+
+.menor .fecha{
+    width: 30%;
+    float:right;
+    text-align: right;
+    margin:0px;
+    font-size: 24px;
+}
+h1{
+    margin:0px;
+    font-size: 36px;
+    width: 100%;
+}
+ul{
+    margin-top: 16px;
+    text-align: justify;
+    font-size: 16px;
+    margin:3vw 0px 2vw 0px;
+}
+li{
+    margin:10px 0px 10px 0px;
+}
+.comentario{
+    text-align: justify;
+}
+.mayor:last-child .comentario{
+    margin-bottom: 5vw;
+}
+
+.mayor h1{
+    margin-top:5vw;
+}
+
+.menor h1{
+    margin-bottom: 1vw;
+}
+
+#printer{
+    /* width: 1669px;
+    height: 1705px; */
+    width: 835px;
+    height: 876px;
+    margin: auto;
+}

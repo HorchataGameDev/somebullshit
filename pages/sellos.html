@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi inmaculada colección</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <link rel="icon" href="../resources/perfil.png" type="image/x-icon">
+    <style>
+        #fondo_presentacion{
+          height: 100%;
+          width:100%;
+          background-color: rgba(0, 0, 0, 0.85);
+          position: fixed;
+          top:0px;
+          left:0px;
+          display: none;
+        }
+        #sujeto_presentacion{
+          top: 50%;
+          left: 50%; 
+          transform: translate(-50%, -50%);
+          height: 50%;
+          aspect-ratio: 99/56;
+          position: relative;
+          cursor: pointer;
+        }
+        .stop-scrolling {
+          overflow: hidden;
+        }
+    </style>
+	<script defer src="../script.js"></script>
+
+  </head>
+  
+  <div id="no_trail"></div>
+  <body>
+
+      <img src="../resources/eepy.gif" id="controlador_musica" onclick="alternarMusica()">
+      <img src="../resources/eepy2.gif" id="controlador_presentacion" onclick="alternarPresentacion()">
+      <div id="fondo_presentacion">
+        <img id=sujeto_presentacion src="../resources/sellos/1.gif" style="opacity:0;" class="pixelart" onclick="window.open(this.getAttribute('src'), '_blank').focus();">
+      </div>
+    <audio loop id="musica_de_fondo">
+        <source src="../resources/musica/Nocturne.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bravo">
+        <source src="../resources/musica/bravo.mp3" type="audio/mpeg">
+    </audio>
+        <div id="divA" style="text-align:center;padding:20px;"><h1 style="font-size: 300%;">mi colección de sellos</h1></div>
+        
+        <center><a href="../index.html#sobreMi" style="font-size: 200%;margin-bottom: 100px;" id="volver">Volver</a></center>
+	<script src="script.js"></script>
+  <script>
+        document.getElementById("fondo_presentacion").style.display="none";
+        if(screen.width<500){
+          document.getElementById("sujeto_presentacion").style.height="20%";
+          document.getElementById("volver").remove();
+        }
+        var last = 0;
+        var sellos= 201; //Estupido javascript no sabe contar ficheros
+        var contenedorSellos = document.getElementById("divA");
+        var suj = document.getElementById("sujeto_presentacion");
+        for(var i=1;i<=sellos;i++){
+            contenedorSellos.innerHTML = contenedorSellos.innerHTML+"<img id='sello_"+i+"' class='muestraSellos' src=../resources/sellos/"+i+".gif>";
+            // onclick=\"this.classList.toggle('pixelart');\"
+            if(i==178){
+              i++;
+              if(screen.width>500){
+                contenedorSellos.innerHTML = contenedorSellos.innerHTML+"<img id='sello_"+i+"' class='muestraSellos ' src=../resources/sellos/"+i+".gif onclick=conexion()>";
+              }
+              else if(sessionStorage.getItem("cheese")==null){
+                contenedorSellos.innerHTML = contenedorSellos.innerHTML+"<img id='sello_"+i+"' class='muestraSellos ' src=../resources/sellos/0.gif onclick=cheese(this)>";
+              }
+            }
+        }
+        function conexion(){alert('... --- ...');alert('Si estás leyendo esto, significa que he conseguido establecer una conexión breve contigo.');alert('No sé quién eres. Sólo sé que has encontrado este mensaje. Eso significa que estás siguiendo mis pasos.');alert('Yo también fui un joven aventurero en busca del Desierto Blanco.');alert('Pero ahora que lo he encontrado, soy incapaz de regresar.');alert('No quiero desilusionarte, pero debes saber que el nombre Desierto Blanco es bastante apropiado.');alert('Esto es un limbo infinito e incoloro. No hay absolutamente nada aquí, ni siquiera una forma de salir.');alert('Necesito tu ayuda, persona misteriosa.');alert('Necesito que alguien me saque de aquí.');alert('Échame una mano, anda.');alert('Ahora mismo debes de estar buscando unas credenciales, ¿verdad?');alert('Te puedo decir dónde las encontré.');alert('La primera credencial era su nombre, sí, pero después de tantos años, no consigo recordarlo.');alert('Solo vas a poder encontrarlo dentro de un libro en la Gran Biblioteca.');alert('La segunda era el nombre de su orden, ¿cómo hacían llamarse? Recuerdo que era rimbombante y un sinsentido. Creo que les gustaba sentirse importantes, creo que nos gustaba...');alert('Perdona, no quiero irme por las ramas.');alert('No va a ser fácil encontrarlo, para empezar deberías usar un teléfono.');alert('La tercera era un número importante para ella. Bueno, lo era para todos nosotros.');alert('Está custodiado por dos criaturas.');alert('La primera, una criatura fantástica y feroz. Grande pero sigilosa.');alert('La segunda, una criatura sin propósito. Un chsite.');alert('Eso es todo lo que puedo ayudarte. Confío en ti.');alert('Encuentra las claves. Descubre la verdad.');alert('Y sácame de este lugar.');}
+        function alternarPresentacion(){
+          var pres = document.getElementById("fondo_presentacion");
+          var gard = document.getElementById("controlador_presentacion");
+          var bravo = document.getElementById("bravo");
+          console.log()
+          if(pres.style.display!="none"){
+            pres.style.display="none";
+            gard.setAttribute("src","../resources/eepy2.gif");
+            document.body.classList.remove("stop-scrolling");
+          }
+          else{
+            pres.style.display="initial";
+            gard.setAttribute("src","../resources/appeal.gif");
+            document.body.classList.add("stop-scrolling");
+            presentacion(0);
+          }
+        }
+        function presentacion(trans){
+          //cambiar sello
+          speed = 30;
+          if(document.getElementById("fondo_presentacion").style.display!="initial"){
+            bravo.pause();
+            return;
+          }
+          if(trans==0){
+            var next = Math.round(Math.random() * (sellos - 1) + 1);
+            
+            while(next == last || next == 179){
+              next = Math.round(Math.random() * (sellos - 1) + 1);
+            }
+            console.log(next);
+            console.log("../resources/sellos/"+next+".gif");
+            document.getElementById("sujeto_presentacion").setAttribute("src","../resources/sellos/"+next.toString()+".gif");
+            last = next;
+            bravo.volume = 0;
+            bravo.currentTime = 0;
+            bravo.play();
+            setTimeout(presentacion,speed,(trans+0.01));
+          }
+          //fade in
+          else if(trans>0){
+            if(trans >= 1){
+              setTimeout(presentacion,1500,(-0.01));
+              return;
+            }
+            suj.style.opacity = trans;
+            bravo.volume = trans/2;
+            setTimeout(presentacion,speed,(trans+0.01));
+          }
+          //fade out
+          else{
+              if(trans <= -1){
+              setTimeout(presentacion,1500,0);
+              return;
+            }
+            suj.style.opacity = (1+trans);
+            bravo.volume = (Math.abs(0.5 + (trans/2)));
+            setTimeout(presentacion,speed,(trans-0.01));
+          }
+        }
+        function cheese(e){
+          alert("Has obtenido \"QUESO\"");
+          sessionStorage.setItem('cheese',true);
+          e.remove();
+        }
+  </script>
+  </body>
+</html>

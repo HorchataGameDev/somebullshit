@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mapa</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #cuerpo{
+            font-family: monospace;
+            width: 200px;
+            overflow: visible;
+            font-size: 10px;
+            margin:auto;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="cuerpo"></div>
+    <script defer="defer">
+        var c = document.getElementById("cuerpo");
+        const caracteres = "#ABCDEFGHIJKLMNÑOPQRSTUVWXYZ#ABCDEFGHIJKLMNÑOPQRSTUVWXYZ#ABCDEFGHIJKLMNÑOPQRSTUVWXY".split('');
+        const max = caracteres.length;
+        let key = "XXXXXX";
+        const pi = "314159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534".split('');
+        const gr = "161803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418".split('');
+        var izq = []; //posicion 6
+        var der = []; //posicion 13
+        var recuperar = "vacio";
+
+        recuperar = document.URL.split("#")[1];
+        if(recuperar ==undefined){
+            window.location.href="derby.html#c";
+        }
+        if(recuperar.length!=6){
+            window.location.href="derby.html#c";
+        }
+        else{
+            key = recuperar;
+        }
+
+        if(screen.width<500) {
+            c.style="font-family: monospace;width:"+screen.width+"px;overflow: hidden;font-size: "+(screen.width/18)*2.7+"px;";
+            escribir2(0,5000);
+        }
+        else{
+            escribir(0,5000);
+        }
+        
+        function escribir(num,maximo){
+            if(num<maximo){
+                // console.log(num%16); //entre 6 y 12
+                my_index = (num*parseInt(key[num%key.length])*parseInt(pi[num%pi.length])*parseInt(gr[num%gr.length]))%max;
+                c.innerHTML += caracteres[my_index]+" ";
+                escribir(num+1,maximo);
+            }
+            else{
+                if(maximo>7000){
+                    return;
+                }
+                setTimeout(escribir,0,num,maximo+5000);
+                return;
+            }
+        }
+
+        function escribir2(num,maximo){
+            if(num<maximo){
+                if((num%18<6) || (num%18>11)){
+                    my_index = (num*parseInt(key[num%key.length])*parseInt(pi[num%pi.length])*parseInt(gr[num%gr.length]))%max;
+                    escribir2(num+1,maximo);
+                    return;
+                }
+                my_index = (num*parseInt(key[num%key.length])*parseInt(pi[num%pi.length])*parseInt(gr[num%gr.length]))%max;
+                c.innerHTML += caracteres[my_index]+" ";
+                escribir2(num+1,maximo);
+            }
+            else{
+                if(maximo>7000){
+                    replace(6553,false);
+                    replace(5435,true);
+                    replace(4477,false);
+                    replace(4153,false);
+                    replace(1379,true);
+                    replace(1067,true);
+                    replace(947,true);
+                    replace(469,false);
+                    replace(155,true);
+                    document.title="Brújula";
+                    return;
+                }
+                setTimeout(escribir2,0,num,maximo+5000);
+                return;
+            }
+        }
+        
+        function replace(posicion,right){
+            m = c.innerHTML;
+            m1 = m.substr(0, (posicion-1));
+            m2 = m.substr((posicion+1));
+            if(right){
+                c.innerHTML=m1+"<mark>&gt;</mark> "+m2;
+            }
+            else{
+                c.innerHTML=m1+"<mark>&lt</mark> "+m2;
+            }
+        }
+    </script>
+</body>
+</html>

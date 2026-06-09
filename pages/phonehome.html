@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HorchataGameDev</title>
+    <link rel="stylesheet" href="../css/phonehome.css">
+    <script defer src="../scripts/phonehome.js" defer></script>
+    <link rel="icon" href="../resources/perfil.png" type="image/x-icon">
+  </head>
+  <body>
+    <div id="navegacion">
+        <table>
+            <tr id="linea">
+                <!-- celdas cuadradas -->
+                 <td onclick="document.body.scrollTop = document.documentElement.scrollTop = 0;goto(0);">0</td>
+                 <td onclick="window.location=('#sobremi');goto(1);">1</td>
+                 <td onclick="window.location=('#competencias');goto(2);">2</td>
+                 <td onclick="window.location=('#misjuegos');goto(3);">3</td>
+                 <td onclick="window.location=('#proyectos');goto(4);">4</td>
+                 <td onclick="window.location=('#amigos');goto(5);">5</td>
+                 <td onclick="window.location=('#contactame');goto(6);">6</td>
+            </tr>
+        </table>
+    </div>
+    <div id=cuerpo>
+        <img src="../resources/perfil.png" id="foto_de_perfil"><hr>
+        <p class="titulo">Bienvenide a la página oficial de horchatagamedev</p>
+        <h1>Mi página</h1>
+        <p class="texto">Hola! Esta es mi página web, la web oficial de Horchata, la Horchata Wide Web, edición móvil!! Aquí vas a encontrar una infinidad de conocimiento y entretenimiento! Familiarízate con mi obra! Aprende sobre de mis habilidades! Juega a mis juegos! Encuentra mis secretos! Enamórate locamente de mí! Pero sobre todo, pásatelo bien!</p>
+        <h2>Últimas noticias</h2>
+        <p>La HorchataWideWeb™ da la bienvenida a sus usuarios móviles.</p>
+        <div id="sobremi" class="marcador"></div>
+        <hr>
+        <h1>Sobre mí</h1>
+        <div class="parada">1</div>
+        <p class="texto">Ahora mismo debes de tener millones de preguntas atravesando tu mente. ¿Quién me está hablando? ¿Quién es esa persona en la esquina superior izquierda de la página? ¿Qué demonios es un "Horchata"? Todas esas preguntas tienen la misma respuesta: Hola! Soy yo! Horchata, desarrollador de videojuegos y programador web!
+        Si me conoces en la vida real y no de twitter o de discord te pido por el amor de Dios que ignores esta página y la cierres inmediatamente, muchas gracias!</p>
+        <h2>Permite que me presente</h2>
+        <p class="texto">Ahora que nos hemos quedado a solas, me llamo Horchata, soy un anciano de 24 años (He/Him) y me gusta mucho la programación, los videojuegos, y la estética de neocities. Creo en la solidaridad, los derechos humanos y la autodeterminación de género y estoy en contra del imperialismo y el capitalismo. Si no estás de acuerdo con algo de esto, come mierda y vete!
+He creado esta página web para tener un sitio donde recopilar las tonterías que voy haciendo y sentir que todo por lo que me estoy esforzando va a parar a alguna parte. ¿Quieres conocerme en profundidad? Accede a mi <a href="museo.html" onclick="setTimeout(function(){window.location='resources/winner.png';alert('Enhorabuena! Has ganado el premio por más páginas abiertas dentro de si misma! Es que te sobra la cpu?');sessionStorage.setItem('premio',true);},1000)">área personal</a> para saber más sobre mis gustos y aficiones. ¿Qué? ¿Que me he convertido en tu persona favorita? Pues contáctame por redes y dime lo mucho que me quieres!</p>
+        <div class="boton_link"><a href="museo.html" onclick="setTimeout(function(){window.location='resources/winner.png';alert('Enhorabuena! Has ganado el premio por más páginas abiertas dentro de si misma! Es que te sobra la cpu?');sessionStorage.setItem('premio',true);},1000)">Cuéntame más</a></div>
+        <h2>Deja que mi impecable colección de sellos te transmita mi valor como persona.</h2>
+        <div id=divScrolleable>
+            <a href=../pages/sellos.html>
+                <div id=divSellos>
+                    <img class=sello id=sello1 src="../resources/sellos/1.gif">
+                    <img class=sello id=sello1 src="../resources/sellos/10.gif">
+                    <img class=sello id=sello1 src="../resources/sellos/100.gif">
+                </div>
+            </a>
+        </div>
+        <h2 id="FAQ">FAQ</h2>
+        <pregunta>Esta es la web más sofisticada de la que he tenido el placer de ser usuario. ¿Cómo puedo tener una página ínfimamente comparable a esta?</pregunta>
+        <respuesta>No temas! GitHub pages puede hostear tus aplicaciones web de forma gratuita! (siempre que no tengan backend) Pero si todo lo que quieres es tener un pequeño blog o porfolio o similar, es tan fácil como aprender un mínimo de HTML y CSS y dejar volar tu imaginación. Ni siquiera necesitas aprender programacion si no quieres hacer algo muy elaborado! No sabría decirte cómo de fácil es aprender HTML y CSS desde 0 por tu cuenta, pero te aseguro que es muy divertido y que tienes miles de tutoriales y recursos a tu disposición.</respuesta>
+        <pregunta>¿Por qué es así tu página?</pregunta>
+        <respuesta>Esta página está inspirada por el estilo maximalista de las páginas de neocities y, en general, el diseño web de pricipios de los 2000. Estudiando front-end aprendes mucho de plantillas y estética, pero a mi siempre me ha gustado la personalidad que tiene <a href="https://homers-webpage.vercel.app/" target="_blank">homer's web page</a>. Como esta página está completamente aislada de mi perfil profesional puedo permitirme hacer cosas feas y mal programadas pero que me hacen feliz.</respuesta>
+        <pregunta>¿Cuántos secretos hay escondidos en la página?</pregunta>
+        <respuesta>Unos cuantos! Tal vez encuentres un secreto que te lleve a otro, y después a otro, y después a otro más...</respuesta>
+        <pregunta>¿Qué pasa con la música?</pregunta>
+        <respuesta>Estoy en ello</respuesta>
+        <pregunta>¿Cuánto pesa la página?</pregunta>
+        <respuesta>En su versión inicial, todos los archivos de esta página combinados pesan la friolera de 100 mb. No creo que con futuras actualizaciones vaya a expandir demasiado el tamaño.</respuesta>
+        <pregunta>¿Cuál es tu política de cookies?</pregunta>
+        <respuesta>Lol. Lmao.</respuesta>
+        <div id="competencias" class="marcador"></div>
+        <hr>
+        <h1>Competencias</h1>
+        <div class="parada">2</div>
+        <p class="texto">
+            Durante mis años vivo en este planeta he aprendido a hacer muchas cosas, algunas más útiles que otras.
+            Esta sección es muy seria y madura y no tiene ningún chiste ni secreto. Estás a punto de ver mi currículum vitae y el resumen de toda una vida de esfuerzo y pasión. Esto es lo que envío a las empresas cuando les pido un empleo remunerado.
+            Si te interesa aprender en profundidad mi perfil profesional y habilidades, accede a la siguiente presentación sobre <a href="coche.html">habilidades y competencias</a>.
+        </p>
+        <div class="boton_link"><a href="coche.html">Cuéntame más</a></div>
+
+        <div id="misjuegos" class="marcador"></div>
+        <hr>
+        <h1>Mis juegos</h1>
+        <div class="parada">3</div>
+        <p class=texto>
+            Me encanta hacer videojuegos! Ahora mismo no tengo tiempo para hacer más de lo que ves aquí, pero eso cambiará dentro de poco! Aquí tienes todas las cosas jugables que he hecho durante los últmos 3 años! Que disfrutes!
+        </p>
+            <h2>Saga del plano</h2>
+            <p class="texto">Una serie de juegos interconectados que tengo planeada ir haciendo durante los próximos años. Para más información, consulta la sección de mis <a href="#proyectos">proyectos</a>. Como puedes ver está muy bastante en proceso.</p>
+            <table class="tabla_juegos">
+                <tr>
+                    <td class="coming_soon">
+                        <img src="../resources/thumbnails/vola.png">	
+                        <p>Coming soon</p>
+                    </td>
+                </tr>
+            </table>
+            <h2>Game Jams</h2>
+            <p class="texto">He hecho de momento 2 juegos para game jams, una en equipo y la otra por mi cuenta. Me gusta mucho el concepto de la game jam aunque con lo perfeccionista que soy nunca he terminado participando en condiciones, siempre hay mucho que pulir y añadir y poco tiempo. Lo bueno es que las expectativas para estos juegos son bajísimas, así que no me molesta enseñarlos a medias. </p>
+            <table class="tabla_juegos">
+                <tr>
+                    <td onclick="window.open('https://robertron.itch.io/cusk', '_blank').focus();">
+                        <img src="../resources/thumbnails/cusk.png">	
+                        <p>Cusk</p>
+                    </td>
+                    <td onclick="window.open('https://horchatagamedev.itch.io/neon?secret=lniX9Hlb0qu8nyLcxoy9U9qPfs', '_blank').focus();">
+                        <img src="../resources/thumbnails/neon.png">	
+                        <p>Neon</p>
+                    </td>
+                </tr>
+            </table>
+            <h2>Everhood custom battles</h2>
+            <p class="texto">Durante el primer aniversario de Everhood, dos amigos y yo decidimos participar en el concurso de custom battles que hicieron los devs, No recuerdo si ganamos un tercero o cuarto puesto, pero nos llevamos una camiseta. Por mi parte, como soy estúpido y masoquista, hice otras dos custom battles que también entraron al concurso.</p>
+            <table class="tabla_juegos">
+                <tr>
+                    <td onclick="window.open('https://horchatagamedev.itch.io/the-conductor?secret=ux808NMl47TR4UxHps1dSRJgWg', '_blank').focus();">
+                        <img src="../resources/thumbnails/conductor.png">	
+                        <p>The conductor</p>
+                    </td>
+                    <td onclick="window.open('https://horchatagamedev.itch.io/the-king-of-all-cosmos?secret=a2ndFOADyeIi7pGLfRzUY2Hyc', '_blank').focus();">
+                        <img src="../resources/thumbnails/king.png">	
+                        <p>The king of all cosmos</p>
+                    </td>
+                    <td onclick="window.open('https://horchatagamedev.itch.io/steamed-hams?secret=kC5g91AoNiVyoqiB63OBD0YV4', '_blank').focus();">
+                        <img src="../resources/thumbnails/steamedhams.png" >	
+                        <p>Steamed hams</p>
+                    </td>
+                </tr>
+            </table>
+            <h2>demos, conceptos y otros</h2>
+            <p class="texto">Aquí voy a meter cualquier otra cosa que no sepa categorizar, principalmente shitposts, demos de otros juegos, pruebas de concepto y alguna cosa graciosa pero que apenas cuente como videojuego.</p>
+            <table class="tabla_juegos">
+                <tr>
+                    <td onclick="window.open('https://horchatagamedev.itch.io/runman?secret=DmJhbcCy7omQAFRn9xlZ5lDjRs', '_blank').focus();">
+                        <img src="../resources/thumbnails/RUNMAN.png">	
+                        <p>RUNMAN</p>
+                    </td>
+                </tr>
+            </table>
+
+        <div id="proyectos" class="marcador"></div>
+        <hr>
+        <h1>Proyectos</h1>
+        <div class="parada">4</div>
+        <p class=texto>
+            Ahora que has visto alguno de mis juegos, deja que te enseñe otras cosas en las que he trabajado. He creado una pequeña recopilación de todos mis <a href="derby.html">proyectos</a> pasados, actuales y alguno futuro a modo de portfolio, con explicaciones de qué son, por qué los hice y por qué no funcionan (porque soy un desastre). Para saber más, visita mi página de <a href="derby.html">proyectos</a>! para saber menos, considera someterte a una lobotomía.
+        </p>
+        <div class="boton_link"><a href="derby.html">Cuéntame más</a></div>
+
+        <div id="amigos" class="marcador"></div>
+        <hr>
+        <h1>Visita a mis amigos</h1>
+        <div class="parada">5</div>
+        <h2>gente guay sexy y con talento</h2>
+            <p class="tecto">Este es el espacio para los botones de los oomfies por eso quiero que tú, persona leyendo esto te hagas una página para poder linkear aqui</p>
+            <h2>Otras páginas que me gustan</h2>
+            <table class="tabla_links">
+                <tr>
+                    <th>
+                        <p class="cuerpo">Sitios donde pasarlo bien online!</p>
+                    </th>
+                    <th>
+                        <p class="cuerpo">Sitios con recursos, tutoriales, gráficos y más!</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://sciencevsmagic.net/fractal/">FRACTAL MACHINE</a><br>Es un programa que crea fractales animados.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://3dtext2gif.com">3dtext2gif</a><br>Hace lo que dice, la he usado para la cabecera de la página.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://noclip.website/">noclip</a><br>La página donde puedes moverte por mapas de videojuegos viejos.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://codepen.io/">CodePen</a><br>Aquí es donde robo efectos chulos. hace un par de años había muchísimos más, no sé qué les ha pasado.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://halo-head.com/comic/welcome-to-halo-head/">HELLO FROM HALO HEAD</a><br>Es un webcomic que llevo leyendo desde hace unos años lo recomiendo mucho.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://www.3dgifmaker.com/obj-to-gif">3D GIF Maker</a><br>Subes un modelo 3d y una textura y te hace una animación sencillita que queda <a href="../resources/ejemplo.gif" target="_blank">graciosa</a>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://www.youtube.com/@Dpto_Cosas">Departamento Cosas</a><br>Una web serie super chula dirigida y protagonizada por amigos míos. La recomendaría aunque lo los conociera.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://gifcities.org/">Gif Cities</a><br>Una parte del internet archive que se dedica a guardar gifs de páginas antiguas.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://oldgamesdownload.com/">Old Games Download</a><br>Un archivo digital de juegos de 1970 a 2010.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://www.w3schools.com/">W3Schools</a><br>My beloved. Es la mejor web de recursos y aprendizaje de HTML, CSS y JavaScript. Esencial si quieres aprender diseño web.<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://www.cameronsworld.net/">Cameron's World</a><br>Es un homenaje muy chulo a los blogs antiguos de internet y el estilo de las páginas que estoy intentando copiar y no me sale.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://www.mf2fm.com/rv/">RV's free Javascript/DHTML</a><br>Efectos de copiar y pegar para tu página con estética de web de los 2000. 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://antifandom.com/">Antifandom</a><br>Cuando tengas que mirar una wiki, cambia en la url la palabra "fandom" por "antifandom" y te llevará a una versión sin anuncios. Súper útil.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://randombullshitgo.neocities.org/">randombullshitGO!</a><br>Un blog de neocities del que he cogido un par de recursos chulos.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://stellarium-web.org/">Stellarium</a><br>Para ver las constelaciones en cualquier momento del día, en cualquier lugar del mundo.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://www.reddit.com/r/neocities/comments/1gwqgh2/comment/lybe0md/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button">98, XP y 7 CSS</a><br>Hojas de estilo que imitan las interfaces de versiones antiguas de windows. Muy bien hechas y fáciles de usar.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://www.artofpkm.com/">The Art of Pokémon</a><br>Una página recopilatoria de artwork de pokémon, centrada en el juego de cartas.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://sprites.pmdcollab.org/">PMD Sprite Repository</a><br>Colección de sprites de pokémon mundo misterioso.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://oskarstalberg.com/Townscaper/">Townscaper</a><br>Una versión web pequeñita de Townscaper, constrúyete una ciudad en 5 minutos.
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://www.flickr.com/photos/britishlibrary/albums/">Álbum de la biblioteca británica</a><br>Recopilatorio de escaneos en alta calidad de ilustraciones de libros antiguos de la Biblioteca Británica. Puedes darles el uso que quieras. Contiene Dibujos, florituras, fotos, grabados, mapas, portadas, partituras, mil cosas!
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://ynoproject.net/">Yume Nikki Online Project</a><br>Yume nikki y otros cuantos juegos similares en tu navegador!<br>Algunos de estos juegos son un peñazo de encontrar y configurar para que funcionen en un ordenador moderno y no japonés, así que es muy cómodo tenerlos todos a tu disposición en esta página.<br>Incluso puedes jugarlos explorando con tus amigos!
+                    </td>
+                    <td>
+                        <a target="_blank" href="https://commons.wikimedia.org/wiki/">Wikimedia</a><br>Wikipedia pone mucho empeño en usar exclusivamente imágenes de contenido libre, así que puedes usar para tus proyectos absolutamente todo lo que encuentres ahí o en wikimedia, a veces con un pequeño requisito de acreditación.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a target="_blank" href="https://erich-friedman.github.io/numbers.html">What's Special About This Number?</a><br>Listado de números del 0 al 9999 con una breve explicación de lo que hace interesante a cada uno.
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table>
+            <h2>The Cringe Captain</h2>
+            <p class="texto">Este soy yo! Puedes copiar mi botón y ponerlo en tu página si quieres (hazlo desde un ordenador). Forma parte de la HorchataWideWeb!!!!</p>
+            <img id="miBoton" src="../resources/botonWeb.gif"> 
+        
+            <div id="contactame" class="marcador"></div>
+            <hr>
+            <h1>Contacta conmigo</h1>
+            <div class="parada">6</div>
+            <p class="texto">Aquí tienes mis redes sociales y algún otro sitio que he linkeado en alguna otra parte de esta página, para que puedas decirme lo buen chico que soy. Escríbeme!</p>
+            <div id="planetario">
+                <img src="../resources/ficcion.gif" class="astro" id="sol"> <!-- from https://web.archive.org/web/20091026224718/http://geocities.com/marblesmaniac/mine/a1l.htm -->
+						<img id=icon_twitter class="astro planeta" src=https://store-images.s-microsoft.com/image/apps.45406.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.2a88a418-b96d-44a6-ad4f-5e0ee6289b2c onclick="window.open('https://x.com/horchataGameDev', '_blank').focus();">
+						<img id=icon_backloggd class="astro planeta" src=https://cdn-1.webcatalog.io/catalog/backloggd/backloggd-icon-filled-256.png?v=1722424670368 onclick="window.open('https://backloggd.com/u/HorchataGameDev/', '_blank').focus();">
+						<img id=icon_gmail class="astro planeta" src=https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1200px-Gmail_icon_%282020%29.svg.png onclick="window.open('../pages/mierda.html', '_blank').focus();">
+						<img id=icon_github class="astro planeta" src=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/250px-GitHub_Invertocat_Logo.svg.png onclick="window.open('https://github.com/HorchataGameDev', '_blank').focus();">
+						<img id=icon_itch class="astro planeta" src=https://play-lh.googleusercontent.com/vutNmbJfKNO-bEH2NJnaImSl49JT7f3t85nsev75-JyBoGoUdee3Q_2CG8dgQGRVlQ onclick="window.open('https://horchatagamedev.itch.io/', '_blank').focus();">
+						<img id=icon_letterboxd class="astro planeta" src=https://play-lh.googleusercontent.com/PFcm5Ne2otuXxkCNgql_XtpHjYrlhIGGQRFaz9XLFg2wikmMP5YCv_OsvFe1PLDAvGg onclick="window.open('https://letterboxd.com/horchataGD/', '_blank').focus();">
+						<img id=icon_spotify class="astro planeta" src=https://m.media-amazon.com/images/I/51rttY7a+9L._h1_.png onclick="window.open('https://open.spotify.com/user/nqrg66uoqwvxauth3x063cwqk', '_blank').focus();">
+            </div>
+            <div class="marcador" style="height:300px"></div>
+            <hr>
+            <p class="texto" style="font-size: 10px;">
+                Esta página es un proyecto personal sin ánimo de lucro. No soy propietario de algunos de los elementos y recursos utilizados. Me he esforzado en enlazar a los originales y poner fuentes en el código. Si tienes cualquier duda o queja al respecto <a href="#contactame">ponte en contacto</a> conmigo.
+            </p>
+            <div class="marcador"></div>
+        </div>
+    </div>
+    <div id="reproductor">
+        <p id="playing">Playing: </p><br>
+        <img id="pause" src="../resources/reproductor/movil/play.png" onclick="botonPausa()">
+        <input type="range" id="duracion" oninput="irAlSegundo(value)">
+        <p id="tiempo">00:00</p>
+        <img id="siguiente" src="../resources/reproductor/movil/siguiente.png" onclick="siguienteCancion()">
+        
+        <audio controls onended=siguienteCancion() id=bgm0 class="bgm" data-nombre="The_Ocean_by_Linnea_Olsson">
+            <source src="../resources/musica/bgm3.mp3" type="audio/mpeg">
+        </audio>
+        <audio controls onended=siguienteCancion() id=bgm2 class="bgm" data-nombre="Reprise_by_DeVotchKa">
+            <source src="../resources/musica/bgm4.mp3" type="audio/mpeg">
+        </audio>
+                        <audio controls onended=siguienteCancion() id=bgm1 class="bgm" data-nombre="Under_a_Monochromatic_Sky_by_Will_Wood">
+            <source src="../resources/musica/bgm5.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div id="fondo"></div>
+  </body>
+</html>
+
+
+<!-- https://mobiforge.com/design-development/html5-mobile-web-device-orientation-events -->
+
+<!-- https://medium.com/ngconf/the-art-of-delaying-image-content-31e1731e0ec8 -->

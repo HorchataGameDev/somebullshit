@@ -1,0 +1,162 @@
+/* #main, #header, #footer{
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+
+} */
+body{
+    margin: 0px;
+    padding: 0px;
+    /* background-image: url("../resources/derby/mid.png"); */
+    background-size: contain;
+    height:100%;
+    overflow-x: hidden;
+
+}
+#titulo{
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    text-align: center;
+    font-size: 500%;
+    filter: drop-shadow(-2px 2px 2px #FF0000) drop-shadow(-2px -5px 3px #FF7F00) drop-shadow(2px 5px 3px #FFFF00) drop-shadow(4px -3px 3px #00FF00) drop-shadow(-4px -3px 3px #0000FF) drop-shadow(4px 3px 5px #2E2B5F) drop-shadow(2px 3px 0px #8B00FF);
+    /* from https://randombullshitgo.neocities.org/border     */
+    color:white;
+}
+#header{
+    background-image: url("../resources/derby/top.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#main{
+    height: 400px;
+    background-image: url("../resources/derby/mid.png");
+    background-size: contain;
+    overflow: hidden;
+
+}
+#footer{
+    background-image: url("../resources/derby/bottom.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.caballos{
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    padding: 0px;
+    margin: 30px;
+    left:-350px;
+}
+.caballos img, #ch img{
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+}
+#c1{
+  -webkit-animation: moveX 2s ease-in-out 0s infinite;
+  -moz-animation: moveX 2s ease-in-out 0s infinite;
+  -o-animation: moveX 2s ease-in-out 0s infinite;
+  animation: moveX 2s ease-in-out 0s infinite;
+}
+#c2{
+  -webkit-animation: moveX 20s linear 0s infinite;
+  -moz-animation: moveX 20s linear 0s infinite;
+  -o-animation: moveX 20s linear 0s infinite;
+  animation: moveX 20s linear 0s infinite;
+}
+#c3{
+  -webkit-animation: moveX 2.8s linear 2s infinite;
+  -moz-animation: moveX 2.8s linear 2s infinite;
+  -o-animation: moveX 2.8s linear 2s infinite;
+  animation: moveX 2.8s linear 2s infinite;
+}
+#c4{
+    left:-10%;
+}
+#c5{
+  -webkit-animation: moveX 3s ease-out 1s infinite;
+  -moz-animation: moveX 3s ease-out 1s infinite;
+  -o-animation: moveX 3s ease-out 1s infinite;
+  animation: moveX 3s ease-out 1s infinite;
+}
+#c6{
+  -webkit-animation: moveX 3s ease-in 1s infinite;
+  -moz-animation: moveX 3s ease-in 1s infinite;
+  -o-animation: moveX 3s ease-in 1s infinite;
+  animation: moveX 3s ease-in 1s infinite;
+}
+#ch{
+  -webkit-animation: moveX 8s ease-in 1s infinite;
+  -moz-animation: moveX 8s ease-in 1s infinite;
+  -o-animation: moveX 8s ease-in 1s infinite;
+  animation: moveX 8s ease-in 1s infinite;
+  animation-direction: reverse;
+  image-rendering: pixelated;
+  position: absolute;
+  top: 100vw;
+  left:-350px;
+}
+
+#contenedor_modales::-webkit-scrollbar{
+  display: none;
+}
+
+#boton_ok{
+  margin:5vw 40% 0px 40%;
+  height: 25vw;
+  aspect-ratio: 1/1;
+  display: none;
+}
+
+ @-webkit-keyframes moveX {
+  from { left: -100%; } to { left: 100%; }
+}
+@-moz-keyframes moveX {
+  from { left: -100%; } to { left: 100%; }
+}
+@-o-keyframes moveX {
+  from { left: -100%; } to { left: 100%; }
+}
+@keyframes moveX {
+  from { left: -100%; } to { left: 100%; }
+}
+
+
+#contenedor_modales{
+  width: 90vw;
+  height: 100vw;
+  top: 25vw;
+  position: fixed;
+  left: 5vw;
+  /* transform: translate(-50%, -50%); */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#contenedor_modales::-webkit-scrollbar{
+  display: none;
+}
+.modal_info, #modal_ch{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(179, 179, 179);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5% 10% 5% 10%;
+}
+.modal_info p, #modal_ch p{
+    text-align: justify;
+}
+.modal_info h1, #modal_ch h1{
+    text-align: center;
+}
+.modal_escondido{
+    display:none;
+    pointer-events: none;
+}
+.pixelart{
+  image-rendering: pixelated;
+}
+
+

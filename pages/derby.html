@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HorsechataGameDev</title>
+    <link rel="stylesheet" href="../css/derby.css">
+    <script defer src="../scripts/derby.js" defer></script>
+    <link rel="icon" href="../resources/perfil.png" type="image/x-icon">
+  </head>
+  <body>
+    <h1 id="titulo">Proyectos</h1>
+    <audio id=horn autoplay>
+        <source src="../resources/musica/FirstCall.ogg" type="audio/mpeg">
+        <!-- from: https://en.wikipedia.org/wiki/File:FirstCall.ogg -->
+    </audio>
+    <audio id=neigh >
+        <source src="../resources/musica/neigh.ogg" type="audio/mpeg">
+        <!-- from: https://en.wikipedia.org/wiki/File:Mares-Prefer-the-Voices-of-Highly-Fertile-Stallions-pone.0118468.s004.oga -->
+    </audio>
+    <div id=header></div>
+    <div id="ch" onclick="charlie()"><img src="../resources/derby/caballos/Charlie.png"></div>
+    <div id=main>
+        <div id="c1" class="caballos" onclick="mostrar(1)">
+            <img src="../resources/derby/caballos/Ace_Impact.png">
+        </div>
+        <div id="c2" class="caballos" onclick="mostrar(2)">
+            <img src="../resources/derby/caballos/Zippy_Chippy.png">
+        </div>
+        <div id="c3" class="caballos" onclick="mostrar(3)">
+            <img src="../resources/derby/caballos/Skibidi_Rizz.png">
+        </div>
+        <div id="c4" class="caballos" onclick="mostrar(4)">
+            <img src="../resources/derby/caballos/Oguri_Cap.png">
+        </div>
+        <div id="c5" class="caballos" onclick="mostrar(5)">
+            <img src="../resources/derby/caballos/Foolish_Pleasure.png">
+        </div>
+        <div id="c6" class="caballos" onclick="mostrar(6)">
+            <img src="../resources/derby/caballos/Cigar.png">
+        </div>
+    </div>
+    <div id="contenedor_modales">
+        <div class="modal_info modal_escondido" id=1 >
+            <h1>M.A.I.D.</h1>
+            <p>Este es Mi Asistente de Interfaz de Discord o MAID para abreviar. Se trata de un bot de discord que hice hace unos años para que avisara de los cumpleaños en el servidor de mis amigos.<br>Funcionaba bastante bien pero no quería pagar un sitio para hostearlo así que no llegamos a usarlo mucho.</p>
+            <p>Me gustaría darle otro intento a hacer un bot de discord. Recuerdo que tenía ideas muy chulas para añadirle funciones, pero ya no uso tanto discord, así que no creo que llegue a hacerlo nunca.</p>
+            <p>Tengo el código de este proyecto subido a github. Si quieres echarle un vistazo al código está todo ahí.</p>
+            <center><a target="_blank" href=https://github.com/HorchataGameDev/MAID>Código en GitHub</a><br><br><img src="../resources/mapa/chars/maid.png" class="pixelart" height="60px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=2 >
+            <h1>La saga del plano</h1>
+            <p>La saga del plano es una saga de juegos cortos interconectados que quiero hacer a lo largo de varios años.<br>Este es mi mayor proyecto personal. Lo que más me apetece hacer. Me motiva más que ninguna otra cosa que tenga entre manos.</p>
+            <p>Hace muchos años pensé la base y la historia para el primer videojuego, pero como no tenía mucha experiencia lo dejé para más adelante mientras conseguía práctica conn otros juegos más sencillos. Al empezar a hacer ese juego más sencillo, decidí que le aportaría mucho valor añadir secretos que hacen referencia a la historia del próximo título. Así empecé a ampliar la escala de todo el proyecto sin darme cuenta.</p>
+            <p>Es entonces cuando me vuelvo demasiado perfeccionista. Quiero que todo tenga sentido y no tener que retconear nada, así que aparqué el juego sencillo y me puse a escribirlo todo. Sé que es casi imposible atar todos los cabos, pero quiero evitar que pase tanto como pueda.</p>
+            <p>A día de hoy todavía no he sacado ningún juego de la saga del plano. He dedicado todo mi tiempo a dejar por escrito una biblia del proyecto y no me arrepiento. Creo que haciendo esto he evitado varios errores que no habrían matado mi espíritu creativo, pero me habrían escocido durante toda mi vida.</p>
+            <p>Entre bocetos, descripciones, guiones, lore e ideas sueltas, este proyecto cuenta con alrededor de 300 páginas de documentación de las que espero sacar alrededor de 5 títulos.</p>
+            <p>La saga del plano existirá  y será terminada aunque me vaya la vida en ello. De verdad que tengo muchísimas ganas de que puedas jugarla algún día.</p>
+            <center><br><img src="../resources/mapa/chars/idol.gif" class="pixelart" height="60px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=3 >
+            <h1>Horchata Wide Web</h1>
+            <p>Perdoooon no quiero poner relleno pero de verdad que me hace mucha ilu tener mi propia web. Aunque no tenga backend y no pueda hacer la mitad de las cosas que me gustaría hacer. Seguramente de aquí a un tiempo monte una página en condiciones a partir de esta, pero de momento damos gracias a github pages my beloved.<br>La verdad es que es divertido tener la limitación de estar trabajando en local, sobre todo si quiero meter secretos en la página, pero me las apaño. Por ejemplo, mira qué clase de cifrado más chula he hecho!<p>
+            <iframe width="100%" height="auto" src="../scripts/cipher.js" style="background-color:white"></iframe>
+
+            </p>También me está sirviendo mucho como distracción. Me lo paso super bien intentando implementar tonterías como el mapa o la pecera y me viene genial para no pensar en mis problemas.</p>
+            <p>Me encantaaría convencer a algunos amigos de que se hicieran páginas del estilo y tener cada uno una especie de red de blogs personalizados, pero claro, para mi es fácil decirlo porque soy desarrollador web.<br>Espero que te esté gustando mi página. <3 </p>
+            <center><br><img src="../resources/botonWeb.gif" class="pixelart" height="60px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=4 >
+            <h1>VOLA</h1>
+            <p>oh boy</p>
+            <p>VOLA es un juego que empecé a desarrollar en 2021 con la intención de practicar pixel art, diálogos y funciones básicas de Unity.<br>Es un juego muy sencillo: pedaleas y lees texto hasta que se acaba. No pretende ser super divertido o profundo, así que no lo es. Un proyecto muy fácil, ¿no?</p>
+            <p>VOLA aún no está terminado. He estado trabajando intermitentemente en él durante los últimos 5 años y está en un perpetuo estado de casi estar listo. Development hell lo llaman. Esto es un asunto completamente personal, y es que nunca estoy del todo satisfecho con el resultado. Estoy seguro de que podría haberlo sacado cuando planeaba hacerlo y que mis amigos me habrían felicitado, les hubiera gustado y habría pasado al siguiente proyecto, pero sería yo quien no estaría contento.</p><p>Le tengo mucho cariño a este juego y no quiero dejarlo de lado. Tengo planes para este juego de los que dependen mis proyectos futuros. Tal vez simplemente no es el momento de sacarlo.</p>
+            <p>Parece una tontería pero siento la necesidad de pedir perdón por tardar tanto, a nadie en particular. También quiero prometer que VOLA existirá, pero tampoco sé a quién se lo estoy prometiendo. Solo sé que no me voy a rendir.</p>
+            <center><br><img src="../resources/vola.png" class="pixelart" height="100px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=5>
+            <h1>untitled music quiz game</h1>
+            <p>¡Mi proyecto final de desarrollo de aplicaciones web! Estoy bastante orgulloso del resultado para el poco tiempo que tuve. Es un party game completamente funcional que usa la api de Spotify.</p>
+            <p>El funcionamiento es el siguiente: te metes en la página y haces login con tu cuenta de spotify, creas una sala o te unes a una sala mediante clave, la aplicación registra las últimas canciones gustadas de cada jugador y selecciona unas pocas. Ahora el programa va reproduciendo las canciones y cada jugador deberá, en un tiempo limitado, adivinar a cuál de sus amigos le gusta la canción que está sonando.</p>
+            <p>Sí, escomo el anime music quiz. Recuerdo que no me preocupé por el diseño visual y era fea como pegarle a un padre, pero no costaría mucho trabajo ponerla a punto y dejarla subida en algún sitio. En fin, otro proyecto a medias.</p>
+            <center><br><img src="../resources/mapa/chars/music.gif" class="pixelart" height="100px"></center>
+        </div>
+        <div class="modal_info modal_escondido" id=6 >
+            <h1>Resolvedor de Pokedoku</h1>
+            <p>He estado resolviendo el pokedoku prácticamente todos los días desde que salió junto con un amigo y siempre nos lo hemos tomado de forma competitiva para completar la pokedex. Ambos estamos siempre buscando formas de optimizar los resultados y llenar las categorías amplias antes de las escasas y eso me ha llevado a pensar cuál sería la forma más eficiente de completar la pokedex.</p>
+            <p>Hace poco, estudiando ciencia de datos y webscrapping, se me ocurrió que podría hacer una aplicación que leyera mi pokédex y generara las elecciones más óptimas (teniendo en cuenta shinies y repes) y me gustaría ponerme con ello después de aprender un poco más sobre ciencia de datos.</p>
+            <p>¿Es trampa hacer esto? Es discutible.</p>
+            <center><br><img src="../resources/orbita/1.png" class="pixelart" height="100px"></center>
+        </div>
+        <div class=modal_escondido id=modal_ch>
+            <h1> </h1>
+            <center><br><img src="../resources/derby/caballos/Charlie.png" class="pixelart" height="100px"></center>
+            <p>
+                Um, hola.<br>
+                Mi nombre es Charlie, Charlie el caballo.<br>
+                Perdona pero he visto que has intentado ir a la página de coordenadas.<br>
+                Quería decirte que después de la almohadilla tienes que poner seis números, ni más ni menos.<br>
+                Cualquier número de 6 dígitos funciona, pero cada uno escribe un resultado diferente.<br>
+                Uy, perdona, igual ya sabías todo esto. No quiero hacerte horsplaining.<br>
+                Estoy seguro que el número correcto hará algo súper especial, pero no sé cuál es.<br>
+                Aunque estoy 100% seguro de que tiene que empezar por 825.<br>
+                Perdón por no poder ayudarte más.<br>
+                Eh, será mejor que siga buscando, adiós.<br>
+            </p>            
+            <center><h2><a href="phonehome.html">página de inicio</a></h2></center>
+        </div>
+        <center><img src="../resources/derby/ok.png" id="boton_ok" onclick="esconder()"></center>
+    </div>
+    <div id=footer>
+
+    </div>
+  </body>
+</html>
