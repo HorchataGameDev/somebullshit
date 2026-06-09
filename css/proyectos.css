@@ -1,0 +1,121 @@
+#fondo{
+    background-image: url("../resources/fondos/city.png");
+    background-repeat: no-repeat;
+	background-size: cover;
+    width: calc(1500px*0.9);
+    height: calc(671px*0.9);
+    position: fixed;
+    z-index: 0;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.chars{
+    position: fixed;
+    image-rendering: pixelated;
+    filter: drop-shadow(00px -10px 5px rgb(56, 56, 56));
+    z-index: 5;
+}
+
+#main_char{
+    height: 40px;
+    width: 40px;
+    z-index: 3;
+    position: fixed;
+    image-rendering: pixelated;
+    z-index: 5;
+}
+
+#controles{
+    position: fixed;
+    top:60px;
+    left:600px;
+    filter: drop-shadow(-3px -2px 0px magenta) drop-shadow(3px -2px 0px yellow) drop-shadow(-2px 3px 0px cyan);
+}
+
+#contenedor_modales{
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+}
+#contenedor_modales::-webkit-scrollbar{
+  display: none;
+}
+.modal_info{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(179, 179, 179);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5% 10% 5% 10%;
+}
+.modal_info p{
+    text-align: justify;
+    /* margin:10px 10% 10px 10%; */
+}
+.modal_info h1{
+    text-align: center;
+}
+.modal_escondido{
+    display:none;
+    pointer-events: none;
+}
+
+.farola{
+    position: fixed;
+    image-rendering: pixelated;
+}
+
+#modal_c, #modal_s{
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 50%;
+    
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(179, 179, 179);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5% 10% 5% 10%;
+}
+
+verso{
+    text-align: center;
+    line-height: 2.5;
+    display: block;
+}
+
+.tel, .tel_content{
+    width: 300px;
+    height: 158px;
+    position: absolute;
+    z-index: 12;
+    left: 25%;
+}
+.tel_content{
+    z-index: 11;
+    background-color: black;
+    border-radius: 20%;
+}
+.tel_content p{
+    border-radius: 12px 12px 0px 12px;
+    padding: 5px;
+    background-color: blue;
+    color:white;
+    font-size: 12px;
+    text-align:;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    width:auto;
+    height:auto;
+}
+.por_si_acaso:hover{
+    font-weight: bolder;
+}

@@ -1,0 +1,88 @@
+<body style="background-image:url('../resources/Nueva_carpeta/Imagen.gif');margin:0px;image-rendering:pixelated;background-size:contain;user-select:none;">
+    <div style="height:fit-content;width:fit-content;position:absolute;top:0px;left:0px;">
+        <div style="position:absolute;top:13.1%;left:12.9%;height:34.5%;width:23.1%;"onclick="alert('Persona misteriosa.');alert('Tte he dado lo esencial parra seeguiBE3 avanzando.');alert('No ssé ccuánto más podr4151 eenviarr, así que seré breve.');alert('Hay ootras cclaves, escondidas en su luugar aanálo5743o.');alert('Una vez las encuenttres, úsalas en la máqu11605na.');alert('Nece22031itarrás también el númeroo de encripttado.');alert('Pierrdo44133eestabilidad233203pressta11011201atención101111100011.');alert('AAAAAAAAAAAAAOOOOOOOOORRRRXT 01001000 0110101 01101000 01100101 0010000 01001001 0010000 01101000 01100001 01110110 01100101 00100000 01110011 01100101 01111000 00100000 01110111 01101001 01110100 01101000 00100000 01101101 00100000 01110000 01101111 01101111 01110000 01101111 01101111 00100000 01110000 01110000');alert('-1');alert('-2');alert('-3');this.removeAttribute( 'onclick');"></div>
+        <div style="position:absolute;top:11.3%;left:38.3%;height:7.7%;width:8.8%;"onclick="document.body.innerHTML='';document.body.style='background-color:black';"></div>
+        <input type="text" maxlength=10 id="in" style="padding:0vw;position:absolute;top:45.4%;left:38.9%;height:7.7%;width:37.6%;letter-spacing:1.1vw;font-size:4.5vw;font-family:monospace;border:none;background:none;opacity:80%;padding-left:1vw;outline:none;;color:#3f5042"spellcheck="false">
+        <div style="position:absolute;top:43.7%;left:77.8%;height:11.8%;width:11.9%;" onclick="alert(decrypt(document.getElementById('cipher').value,document.getElementById('in').value));"></div>
+        <div style="position:absolute;top:65.3%;left:10.7%;height:2.5%;width:4.5%;"onclick="document.getElementById('cipher').value=String((parseInt(document.getElementById('cipher').value)+1000)%10000).padStart(4,'0');"></div>
+        <div style="position:absolute;top:64.9%;left:17%;height:2.5%;width:4.5%;"onclick="document.getElementById('cipher').value=String((parseInt(document.getElementById('cipher').value)+100)%10000).padStart(4,'0');"></div>
+        <div style="position:absolute;top:64.5%;left:23.2%;height:2.5%;width:4.5%;"onclick="document.getElementById('cipher').value=String((parseInt(document.getElementById('cipher').value)+10)%10000).padStart(4,'0');"></div>
+        <div style="position:absolute;top:63.6%;left:29.5%;height:2.5%;width:4.5%;"onclick="document.getElementById('cipher').value=String((parseInt(document.getElementById('cipher').value)+1)%10000).padStart(4,'0');"></div>
+        <input value="0000"type="text"id="cipher"style="position:absolute;top:52.7%;left:11%;height:9%;width:21.5%;transform:skew(0deg,-5deg);color:#3f5042;letter-spacing:1vw;font-size:6vw;text-align:center;font-family:monospace;border:none;background:none;outline:none;padding:0vw;"readonly>
+        <img src="../resources/Nueva_carpeta/Imagen.png"style="image-rendering:pixelated;width:100vw;aspect-ratio:1/1;position:relative;pointer-events:none;">
+</div></body>
+<script>
+    const caracteres = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".split('');
+    const max = caracteres.length;
+
+    function encrypt(key,text){
+        resultado = [];
+        acumulador=0;
+        if(key.length<1){
+            return 'no hay clave';
+            tiene que ser numero
+        }
+        if(text.length<1){
+            return 'no hay texto'
+        }
+        text = text.toUpperCase();
+        key = key.split('');
+        text = text.split('');
+        var i = 0;
+        for (var j =0;j<text.length;j++){
+            var existe = false;
+            for (var k=0;k<max;k++){
+                if(text[j]==caracteres[k]){
+                    my_index = (k+acumulador+(key[i].charCodeAt(0)%max))%max;
+                    acumulador = acumulador+key[i].charCodeAt(0);
+                    i++
+                    i=i%key.length
+                    resultado.push(caracteres[my_index]);
+                    existe = true;
+                    break;
+                }
+            }
+            if(!existe){
+                resultado.push(text[j]);
+            }
+        }
+        return resultado.join("");
+    }
+
+    function decrypt(key,text){
+        resultado = [];
+        acumulador=0;
+        if(key.length<1){
+            return 'no hay clave';
+            tiene que ser numero
+        }
+        if(text.length<1){
+            return 'no hay texto'
+        }
+        text = text.toUpperCase();
+        key = key.split('');
+        text = text.split('');
+        var i = 0;
+        for (var j =0;j<text.length;j++){
+            var existe = false;
+            for (var k=0;k<max;k++){
+                if(text[j]==caracteres[k]){
+                    my_index = (k-acumulador-(key[i].charCodeAt(0)%max))%max;
+                    acumulador = acumulador+key[i].charCodeAt(0);
+                    if(my_index<0){
+                        my_index = max+my_index;
+                    }
+                    i++
+                    i=i%key.length
+                    resultado.push(caracteres[my_index]);
+                    existe = true;
+                    break;
+                }
+            }
+            if(!existe){
+                resultado.push(text[j]);
+            }
+        }
+        return resultado.join("");
+    }
+</script>

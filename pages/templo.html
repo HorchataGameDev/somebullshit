@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="icon" href="../resources/perfil.png" type="image/x-icon">
+    <title>revisa las pistas</title>
+
+    <style>
+        body{
+            background-color: #000000;
+        }
+        #personaje{
+            height: 200px;
+            width: auto;
+            top: 40%;
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            image-rendering: pixelated;
+            position: fixed;
+        }
+        #contenedor_texto{
+            overflow-x: visible;
+            position: absolute;
+            max-width: 100%;
+            max-height: 250px;
+            white-space: nowrap;
+            -webkit-animation-name: move;
+            -webkit-animation-duration: 60s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: up;
+            -webkit-animation-timing-function:linear;
+        }
+        #contenedor_texto p{
+            color: white;
+            margin: 300px 200px 100px 3000px;
+            display: inline-block;
+            font-size: 72px;
+            font-family: monospace;
+        }
+
+        @-webkit-keyframes move {
+        0% {
+            transform:translatex(0%);
+        }
+        100% {
+            transform:translateX(-7000%);
+        }
+        }
+    </style>
+    <link rel="icon" href="../resources/icono.png" type="image/x-icon">
+</head>
+<body>
+
+</body>
+    <script>
+        console.log(screen.width);
+        console.log(screen.height);
+        if(screen.width>800&&screen.height>700){
+            document.body.innerHTML = "Hmm...<br>Parece que has pasdo por alto algún detalle.<br>¿No?";
+        }
+        else{
+            document.body.innerHTML = `    <div id=contenedor_texto>
+        <p>Tú, que buscas historia antigua y prohibida.</p>
+
+        <p>En este templo no vas a encontrar lo que ansías.</p>
+
+        <p>La orden fue disuelta por un buen motivo ¿sabes?</p>
+
+        <p>Su nombre se borró de los libros donde figuraba, se olvidó de las mentes en las que residía y se persiguió a los que no estuvieron de acuerdo.</p>
+
+        <p>¿Sabes qué te harán si te encuentran investigando la orden?</p>
+
+        <p>Mira la doncella robótica de ahí fuera. Lo sabía todo sobre la orden. Sabía demasiado.</p>
+
+        <p>Antiguamente podrías haber hablado con ella y haber preguntado sobre cualquier cosa. Estaba obligada a servir.</p>
+
+        <p>Pero hace muchos años que no funciona. Deshabilitaron su código para que gente como tú no lo tuviera tan fácil.</p>
+
+        <p>Ahora nadie puede hablar con ella, así que ni lo intentes.</p>
+
+        <p>La curiosidad de tu especie empeora las cosas para todos.</p>
+
+        <p>Pobre doncella....</p>
+    </div>
+    <img src="../resources/mapa/walking_right.gif" id="personaje">`;
+    document.title = "Lo que mató al gato";
+        }
+    </script>
+</html>

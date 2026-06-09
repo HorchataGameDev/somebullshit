@@ -1,0 +1,215 @@
+body {
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+#main {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    aspect-ratio: 1/1;
+    top: 20%;
+}
+
+#vista_sala {
+    height: 100%;
+    aspect-ratio: 1/1;
+    font-size: auto;
+    color:white;
+    text-align: center;
+}
+
+.interfaz {
+    height: 10%;
+    width: 10%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: 9;
+}
+
+#home{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(2);
+    height: 300vw;
+    image-rendering: pixelated;
+    z-index: -10;
+}
+
+#arriba {
+    left: 50%;
+    transform: translateX(-50%);
+    padding:0px 100px 100px 100px;
+}
+
+#derecha {
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    padding:100px 0px 100px 100px;
+}
+
+#izquierda {
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    padding:100px 100px 100px 0px;
+}
+
+#vista_sala,
+.interfaz {
+    image-rendering: pixelated;
+}
+
+.ojo{
+    position: absolute;
+    z-index: 2;
+    transform: scale(2);
+    filter: drop-shadow(2px 0px 0px #ffffff);
+    pointer-events: none;
+}
+.ojo:nth-child(even) {
+    transform: scale(-2,2);
+}
+
+#contenedor_info {
+    height: fit-content;
+    width: fit-content;
+    top: 0px;
+    /* padding: 50px; */
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    position: absolute;
+    text-align: center;
+    color: white;
+    display: initial;
+}
+
+.imagen {
+    width: 100%;
+}
+
+#cerrar {
+    margin: 100px;
+    background-color: white;
+    color: black;
+    font-size: 600%;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    width: 10%;
+    margin: 100px 45% 100px 45%;
+    font-family: monospace;
+}
+
+.cuadro {
+    /* display: none; */
+    width: 90vw;
+    padding: 5vw;
+}
+
+.cuadro > img, .foto_galeria{
+    outline: 10px solid white;
+    outline-offset: -10px;
+}
+
+.titulo{
+    margin-top: 75px;
+    margin-bottom: 0px;
+}
+.traduccion{
+    font-size: 1.8em;
+    margin:0px;
+}
+.autor{
+    margin-bottom: 0px;
+}
+.fecha{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.descripcion{
+    text-align: justify;
+    margin-bottom: 100px;
+}
+
+.cuadro{
+    font-size: 170%;
+}
+
+.intro{
+    color: #00face;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+
+.rant p{
+    text-align: justify;
+}
+.oculto{
+    display: none;
+}
+
+a{
+    color: #00face;
+    text-decoration: underline;
+}
+
+.imagen_texto, .rant video{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    margin: 20px auto 20px auto;
+    outline: none;
+    border: none;
+    display: block;
+}
+
+.sillies{
+    width: auto;
+    height: 40vw;
+}
+
+.foto_tag{
+    text-align: center;
+}
+
+#yo{
+    image-rendering: pixelated;
+}
+
+.foto_galeria{
+    display:inline-block;
+    width: 90vw;
+    height: auto;
+}
+.foto_tag{
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:35vw;
+    width:100%;
+    font-size: 1.8em;
+}
+.foto_tag::first-line{
+    font-size: 1.5em;
+}
+.narr{
+    margin-top: 80vw;
+    margin-bottom: 50vw;
+    font-style: italic;
+}
+#romeo{
+    height: 30vw;
+    margin-top: 30vw;
+    margin-bottom: 5vw;
+    outline: none;
+    image-rendering: pixelated;
+}
+#monologo{
+    line-height: 5vw;
+}

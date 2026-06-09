@@ -1,0 +1,95 @@
+body{
+    background-image: url("../resources/mesa/tapete.png");
+    background-repeat: no-repeat;
+	background-size: cover;
+    overflow: clip;
+}
+.carta{
+    background-image: url("../resources/mesa/carta1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* height: 976px;
+    width: 686px; originales*/
+    height: 488px;
+    width: 343px;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    /* transform: scale(0.25,0.25); */
+    position: absolute;
+    z-index: 10;
+    transition: transform 0.4s;
+    border-radius: 5%;
+    border: solid gainsboro 2px;
+}
+/* .carta:active{
+    z-index: 11;
+} */
+#contenedor_cartas{
+    /* width: calc(1500px*0.9);
+    height: calc(671px*0.9); */
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    overflow: visible;
+}
+.flipable *{
+    display: none;
+    border: none;
+}
+.carta *{
+    overflow: hidden;
+    padding: 5px 20px 5px 20px;
+    margin:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.flipable, .flipable *, .carta, .carta *{
+    cursor: grab;
+}
+
+.imagen_texto, .imagen_sola{
+    height: 200px;
+    aspect-ratio:1/1;
+    margin: 0px 50px 0px 50px;
+}
+
+.imagen_sola{
+    margin: 57px 0px 0px 0px;
+    height: 300px;
+}
+
+.texto_solo{
+    vertical-align: middle;
+}
+
+.carta h1{
+    text-align: center;
+    /* padding: 0px; */
+    font-weight: 36px;
+}
+
+#Old_Hobson{
+    position: fixed;
+    height: 29%;
+    aspect-ratio: 1/1;
+    top:2%;
+    left:2%;
+    z-index: 0;
+    background-image: url("../resources/mesa/chips_wikimedia.png");
+    background-repeat: none;
+    background-size: contain;
+}
+
+#Old_Hobson a{
+    font-size:4vw;
+    display: block;
+    text-align: center;
+    margin-top:30%;
+    
+}
