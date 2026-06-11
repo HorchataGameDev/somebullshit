@@ -7,6 +7,11 @@ let face = 0;
 let crack = false;
 // console.log(parseInt("10px"));
 
+let images = document.getElementsByTagName("img");
+for(i=0;i<images.length;i++){
+    images[i].setAttribute("loading","lazy");
+}
+
 for(i=0;i<=fondos;i++){
     let div = document.createElement("div");
     div.classList.add("fondo");
@@ -28,21 +33,21 @@ function normal(){
 }
 function mover(){
     if(Math.abs(v)<1){
-        setTimeout(mover,10);
+        setTimeout(mover,20);
         return;
     }
     if(parseInt(c.style.left)>-100){
         c.style.left=parseFloat(c.style.left)-3+"vw";
-        setTimeout(mover,10);
+        setTimeout(mover,20);
         return;  
     }
         if(parseInt(c.style.left)<-5000){
         c.style.left=parseFloat(c.style.left)+3+"vw";
-        setTimeout(mover,10);
+        setTimeout(mover,20);
         return;  
     }
     c.style.left=parseFloat(c.style.left)+(v/10)+"vw";
-    setTimeout(mover,10);
+    setTimeout(mover,20);
 }
 
 window.addEventListener("devicemotion", handleMotion);
@@ -74,6 +79,9 @@ function handleOrientation(event) {
 
 function handleMotion(event) {
     momentum = event.acceleration.x+event.acceleration.y+event.acceleration.z;
+    if(momentum>5&&momentum<9){
+        setTimeout(checkMomentum, 500);
+    }   
 }
 
 function checkMomentum(){
