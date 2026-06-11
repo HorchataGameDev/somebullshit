@@ -7,8 +7,8 @@
 }
 #coche{
     height:auto;
-    width: 100vw;
-    bottom:0vw;
+    width: 140vw;
+    bottom:-60vw;
     left: 35%; 
     transform: translate(-50%, -50%);
     position:fixed;
@@ -18,9 +18,9 @@
 }
 #suelo{
     z-index: 2;
-    width: 110vw;
+    width: 120vw;
     bottom:-45vw;
-    left:0vw;
+    left:-5vw;
     position:fixed;
     image-rendering: pixelated;
 }
@@ -108,7 +108,7 @@ body{
     height: 80vw;
     width: 80vw;
     color:white;
-    text-shadow: 1px 1px cyan;
+    text-shadow: 2px 2px cyan;
     text-align: center;
     background-image: linear-gradient(to bottom, yellow, magenta);
     filter: drop-shadow(0 0 3rem crimson);
@@ -122,6 +122,14 @@ body{
     text-align: center;
     color: white;
 }
+/* .carta img{
+    margin-top:20px;
+    height: 40%;
+    aspect-ratio: 1/1;
+}
+.carta h1, .carta p{
+    margin:0px;
+} */
 
 .imagen_texto, .imagen_sola{
     height: 60%;
@@ -144,7 +152,7 @@ body{
 }
 
 .carta p{
-    font-size: 80%;
+    font-size: 250%;
     padding-top:10%;
     margin:0px;
 }

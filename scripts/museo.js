@@ -58,6 +58,7 @@ function loadSala() {
     window.location.reload();
     }
   document.getElementById("vista_sala").src = "../resources/museo/salas/" + sala + "" + facing + ".png";
+  console.log("history : "+history.join(""));
   if(document.getElementsByClassName("ojo")[0]!=undefined){
     while(document.getElementsByClassName("ojo").length > 0) {
       document.getElementsByClassName("ojo")[0].remove();
